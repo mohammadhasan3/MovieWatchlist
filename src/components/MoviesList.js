@@ -7,6 +7,7 @@ import { useState } from "react";
 
 //Components
 import WatchListItem from "./WatchListItem";
+import WatchedItem from "./WatchedItem";
 
 const MovieList = () => {
   const moviesList = movieStore.watchlist.map((movies) => (
@@ -19,6 +20,8 @@ const MovieList = () => {
   return (
     <>
       <h1>{moviesList}</h1>
+
+      <h2>{watchedList}</h2>
     </>
   );
 };
