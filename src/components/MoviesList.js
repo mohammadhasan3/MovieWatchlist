@@ -12,6 +12,10 @@ const MovieList = () => {
   const moviesList = movieStore.watchlist.map((movies) => (
     <WatchListItem movies={movies} key={movies.id} />
   ));
+
+  const watchedList = movieStore.watched.map((movies) => (
+    <WatchedItem movies={movies} key={movies.id} />
+  ));
   return (
     <>
       <h1>{moviesList}</h1>

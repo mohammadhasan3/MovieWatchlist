@@ -41,5 +41,17 @@ const watchlist = [
     slug: "the-hangover",
   },
 ];
+const watched = [
+  {
+    name: "Harry poter",
+    id: 8,
+    slug: "harry-poter",
+  },
 
-export default watchlist;
+  {
+    name: "The Godfather",
+    id: 9,
+    slug: "the-godfather",
+  },
+];
+export { watchlist, watched };

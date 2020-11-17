@@ -1,16 +1,19 @@
 //Data
-import watchlist from "../watchlist";
+import { watchlist, watched } from "../watchlist";
 
 //Libraries
 import { action, makeObservable, observable } from "mobx";
 import slugify from "react-slugify";
+import { watched } from "../watchlist";
 
 class MovieStore {
   watchlist = watchlist;
+  watched = watched;
 
   constructor() {
     makeObservable(this, {
       watchlist: observable,
+      watched: observable,
     });
   }
 }
