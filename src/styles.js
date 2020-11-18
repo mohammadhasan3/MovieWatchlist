@@ -9,3 +9,11 @@ export const WatchButtonStyled = styled.button`
   background-color: green;
   color: white;
 `;
+export const UnWatchButtonStyled = styled.button`
+  font-size: 1em;
+  margin: 1.25em;
+  padding: 0.25em 1em;
+  border-radius: 3px;
+  background-color: red;
+  color: white;
+`;

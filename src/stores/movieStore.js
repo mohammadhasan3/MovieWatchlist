@@ -13,6 +13,8 @@ class MovieStore {
     makeObservable(this, {
       watchlist: observable,
       watched: observable,
+      watchMovie: action,
+      unWatchMovie: action,
     });
   }
   watchMovie = (movieId) => {
@@ -20,7 +22,12 @@ class MovieStore {
     this.watchlist = this.watchlist.filter((movie) => movie.id !== movieId);
     this.watched.push(removedMovie);
   };
-}
 
+  unWatchMovie = (movieId) => {
+    const removedMovie = this.watched.find((movie) => movie.id === movieId);
+    this.watched = this.watched.filter((movie) => movie.id !== movieId);
+    this.watchlist.push(removedMovie);
+  };
+}
 const movieStore = new MovieStore();
 export default movieStore;

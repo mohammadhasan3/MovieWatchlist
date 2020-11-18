@@ -1,4 +1,8 @@
+//Libraries
 import { observer } from "mobx-react";
+
+//Components
+import UnWatchButton from "./buttons/UnWatchButton";
 
 const WatchedItem = ({ movies }) => {
   return (
@@ -9,6 +13,7 @@ const WatchedItem = ({ movies }) => {
           className="list-group-item list-group-item-action"
         >
           {movies.name}
+          <UnWatchButton movieId={movies.id} />
         </button>
       </div>
     </>
