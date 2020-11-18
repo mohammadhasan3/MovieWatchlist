@@ -15,6 +15,11 @@ class MovieStore {
       watched: observable,
     });
   }
+  watchMovie = (movieId) => {
+    const removedMovie = this.watchlist.find((movie) => movie.id === movieId);
+    this.watchlist = this.watchlist.filter((movie) => movie.id !== movieId);
+    this.watched.push(removedMovie);
+  };
 }
 
 const movieStore = new MovieStore();

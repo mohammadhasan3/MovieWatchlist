@@ -19,9 +19,18 @@ const MovieList = () => {
   ));
   return (
     <>
-      <h1>{moviesList}</h1>
-
-      <h2>{watchedList}</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm">
+            <h4>Movies to watch:</h4>
+            {moviesList}
+          </div>
+          <div className="col-sm">
+            <h4>Watched Movies:</h4>
+            {watchedList}
+          </div>
+        </div>
+      </div>
     </>
   );
 };

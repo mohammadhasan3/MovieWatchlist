@@ -3,7 +3,14 @@ import { observer } from "mobx-react";
 const WatchedItem = ({ movies }) => {
   return (
     <>
-      <h1>{movies.name}</h1>
+      <div className="list-group">
+        <button
+          type="button"
+          className="list-group-item list-group-item-action"
+        >
+          {movies.name}
+        </button>
+      </div>
     </>
   );
 };
