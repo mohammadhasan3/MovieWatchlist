@@ -5,8 +5,6 @@ import movieStore from "../../stores/movieStore";
 import { AddButtonStyled } from "../../styles";
 
 const AddButton = ({ movieName }) => {
-  console.log(movieName);
-
   return (
     <>
       <AddButtonStyled onClick={() => movieStore.addMovie(movieName)}>

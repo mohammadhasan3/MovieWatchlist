@@ -44,14 +44,13 @@ const MovieList = () => {
           <div className="col-sm">
             <AddBar setQuery={setQuery}></AddBar>
             <AddButton movieName={query}>Add</AddButton>
-            {console.log(query)}
 
-            <h4>Movies to watch:</h4>
+            <h4>Movies to watch: {movieStore.watchlist.length}</h4>
             <SearchBar setSearch={setSearch} />
             {moviesList}
           </div>
           <div className="col-sm">
-            <h4>Watched Movies:</h4>
+            <h4>Watched Movies: {movieStore.watched.length}</h4>
             <SearchBar2 setWatched={setWatched} />
             {watchedList}
           </div>

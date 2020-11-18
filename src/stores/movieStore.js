@@ -8,6 +8,7 @@ import slugify from "react-slugify";
 class MovieStore {
   watchlist = watchlist;
   watched = watched;
+  counter = this.watchlist.length + this.watched.length + 1;
 
   constructor() {
     makeObservable(this, {
@@ -43,7 +44,8 @@ class MovieStore {
       slug: "",
     };
     newMovie.name = movieName;
-    newMovie.id = this.watchlist.length + this.watched.length + 1;
+    newMovie.id = this.counter;
+    this.counter++;
     newMovie.slug = slugify(newMovie.name);
     this.watchlist.push(newMovie);
     console.log(newMovie);
