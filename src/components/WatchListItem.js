@@ -3,6 +3,7 @@ import { observer } from "mobx-react";
 
 //Components
 import WatchButton from "./buttons/WatchButton";
+import DeleteButton from "./buttons/DeleteButton";
 
 const WatchListItem = ({ movies }) => {
   return (
@@ -14,6 +15,7 @@ const WatchListItem = ({ movies }) => {
         >
           {movies.name}
           <WatchButton movieId={movies.id} />
+          <DeleteButton movieId={movies.id} />
         </button>
       </div>
     </>

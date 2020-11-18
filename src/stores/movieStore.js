@@ -15,6 +15,8 @@ class MovieStore {
       watched: observable,
       watchMovie: action,
       unWatchMovie: action,
+      deleteMovie: action,
+      addMovie: action,
     });
   }
   watchMovie = (movieId) => {
@@ -27,6 +29,24 @@ class MovieStore {
     const removedMovie = this.watched.find((movie) => movie.id === movieId);
     this.watched = this.watched.filter((movie) => movie.id !== movieId);
     this.watchlist.push(removedMovie);
+  };
+
+  deleteMovie = (movieId) => {
+    this.watchlist = this.watchlist.filter((movie) => movie.id !== movieId);
+    this.watched = this.watched.filter((movie) => movie.id !== movieId);
+  };
+
+  addMovie = (movieName) => {
+    const newMovie = {
+      name: "",
+      id: 0,
+      slug: "",
+    };
+    newMovie.name = movieName;
+    newMovie.id = this.watchlist.length + this.watched.length + 1;
+    newMovie.slug = slugify(newMovie.name);
+    this.watchlist.push(newMovie);
+    console.log(newMovie);
   };
 }
 const movieStore = new MovieStore();

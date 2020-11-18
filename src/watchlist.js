@@ -43,9 +43,9 @@ const watchlist = [
 ];
 const watched = [
   {
-    name: "Harry poter",
+    name: "Harry Potter",
     id: 8,
-    slug: "harry-poter",
+    slug: "harry-potter",
   },
 
   {
